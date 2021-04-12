@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ServerOrchaModule } from '@orcha-todo-example-app/server/orcha';
+import { ServerOrchaModule } from '@orcha-user-auth-starter/server/orcha';
 import {
   initializeTransactionalContext,
   patchTypeORMRepositoryWithBaseRepository,
@@ -20,7 +20,7 @@ patchTypeORMRepositoryWithBaseRepository();
       port: 5432,
       username: 'postgres',
       password: '1Qazxsw2',
-      database: 'orcha-todo-example-app-e2e',
+      database: 'orcha-user-auth-starter-e2e',
       synchronize: true,
       autoLoadEntities: true,
       ssl: false,

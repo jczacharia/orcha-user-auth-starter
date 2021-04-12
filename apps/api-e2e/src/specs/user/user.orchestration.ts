@@ -1,5 +1,8 @@
 import { INestApplication } from '@nestjs/common';
-import { IUserOrchestration, OrchaTodoExampleAppOrchestrations } from '@orcha-todo-example-app/shared/domain';
+import {
+  IUserOrchestration,
+  OrchaUserAuthStarterOrchestrations,
+} from '@orcha-user-auth-starter/shared/domain';
 import {
   createNestjsTestOrchestration,
   ITestOrchestration,
@@ -7,7 +10,7 @@ import {
   TestOrchestration,
 } from '@orcha/testing';
 
-@TestOrchestration(OrchaTodoExampleAppOrchestrations.user)
+@TestOrchestration(OrchaUserAuthStarterOrchestrations.user)
 class UserOrchestration implements ITestOrchestration<IUserOrchestration> {
   @TestOperation()
   signUp!: ITestOrchestration<IUserOrchestration>['signUp'];

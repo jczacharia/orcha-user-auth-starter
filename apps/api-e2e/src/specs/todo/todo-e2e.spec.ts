@@ -1,7 +1,7 @@
 import { HttpStatus, INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
-import { TagRepository, TodoRepository } from '@orcha-todo-example-app/server/core/domain';
-import { ITodoOrchestration, IUserOrchestration, Todo } from '@orcha-todo-example-app/shared/domain';
+import { TagRepository, TodoRepository } from '@orcha-user-auth-starter/server/core/domain';
+import { ITodoOrchestration, IUserOrchestration, Todo } from '@orcha-user-auth-starter/shared/domain';
 import { createQuery } from '@orcha/common';
 import { ITestOrchestration } from '@orcha/testing';
 import { AppTestModule } from '../../core/app-test.module';

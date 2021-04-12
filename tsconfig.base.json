@@ -28,47 +28,29 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@orcha/api-interfaces": [
-        "libs/api-interfaces/src/index.ts"
+      "@orcha-user-auth-starter/server/core/services": [
+        "libs/server/core/services/src/index.ts"
       ],
-      "@orcha/angular": [
-        "libs/angular/src/index.ts"
+      "@orcha-user-auth-starter/server/core/domain": [
+        "libs/server/core/domain/src/index.ts"
       ],
-      "@orcha/nestjs": [
-        "libs/nestjs/src/index.ts"
+      "@orcha-user-auth-starter/server/orcha": [
+        "libs/server/orcha/src/index.ts"
       ],
-      "@orcha/typeorm": [
-        "libs/typeorm/src/index.ts"
+      "@orcha-user-auth-starter/client/shared/data-access": [
+        "libs/client/shared/data-access/src/index.ts"
       ],
-      "@orcha/common": [
-        "libs/common/src/index.ts"
+      "@orcha-user-auth-starter/client/shell": [
+        "libs/client/shell/src/index.ts"
       ],
-      "@orcha/testing": [
-        "libs/testing/src/index.ts"
+      "@orcha-user-auth-starter/shared/domain": [
+        "libs/shared/domain/src/index.ts"
       ],
-      "@orcha-todo-example-app/server/core/services": [
-        "libs/todo-example-app/server/core/services/src/index.ts"
+      "@orcha-user-auth-starter/shared/util": [
+        "libs/shared/util/src/index.ts"
       ],
-      "@orcha-todo-example-app/server/core/domain": [
-        "libs/todo-example-app/server/core/domain/src/index.ts"
-      ],
-      "@orcha-todo-example-app/server/orcha": [
-        "libs/todo-example-app/server/orcha/src/index.ts"
-      ],
-      "@orcha-todo-example-app/client/shared/data-access": [
-        "libs/todo-example-app/client/shared/data-access/src/index.ts"
-      ],
-      "@orcha-todo-example-app/client/shell": [
-        "libs/todo-example-app/client/shell/src/index.ts"
-      ],
-      "@orcha-todo-example-app/shared/domain": [
-        "libs/todo-example-app/shared/domain/src/index.ts"
-      ],
-      "@orcha-todo-example-app/shared/util": [
-        "libs/todo-example-app/shared/util/src/index.ts"
-      ],
-      "@orcha-todo-example-app/client/shared/util": [
-        "libs/todo-example-app/client/shared/util/src/index.ts"
+      "@orcha-user-auth-starter/client/shared/util": [
+        "libs/client/shared/util/src/index.ts"
       ]
     }
   },

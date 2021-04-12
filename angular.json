@@ -53,193 +53,34 @@
         }
       }
     },
-    "angular": {
-      "projectType": "library",
-      "root": "libs/angular",
-      "sourceRoot": "libs/angular/src",
-      "prefix": "orcha",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/angular/tsconfig.lib.json",
-            "project": "libs/angular/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/angular/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/angular/src/**/*.ts", "libs/angular/src/**/*.html"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/angular"],
-          "options": {
-            "jestConfig": "libs/angular/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "nestjs": {
-      "root": "libs/nestjs",
-      "sourceRoot": "libs/nestjs/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/nestjs/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/nestjs"],
-          "options": {
-            "jestConfig": "libs/nestjs/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "build": {
-          "builder": "@nrwl/node:package",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "outputPath": "dist/libs/nestjs",
-            "tsConfig": "libs/nestjs/tsconfig.lib.json",
-            "packageJson": "libs/nestjs/package.json",
-            "main": "libs/nestjs/src/index.ts",
-            "assets": ["libs/nestjs/*.md"]
-          }
-        }
-      }
-    },
-    "typeorm": {
-      "root": "libs/typeorm",
-      "sourceRoot": "libs/typeorm/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/typeorm/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/typeorm"],
-          "options": {
-            "jestConfig": "libs/typeorm/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "build": {
-          "builder": "@nrwl/node:package",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "outputPath": "dist/libs/typeorm",
-            "tsConfig": "libs/typeorm/tsconfig.lib.json",
-            "packageJson": "libs/typeorm/package.json",
-            "main": "libs/typeorm/src/index.ts",
-            "assets": ["libs/typeorm/*.md"]
-          }
-        }
-      }
-    },
-    "common": {
-      "root": "libs/common",
-      "sourceRoot": "libs/common/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/common/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/common"],
-          "options": {
-            "jestConfig": "libs/common/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "build": {
-          "builder": "@nrwl/node:package",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "outputPath": "dist/libs/common",
-            "tsConfig": "libs/common/tsconfig.lib.json",
-            "packageJson": "libs/common/package.json",
-            "main": "libs/common/src/index.ts",
-            "assets": ["libs/common/*.md"]
-          }
-        }
-      }
-    },
-    "testing": {
-      "root": "libs/testing",
-      "sourceRoot": "libs/testing/src",
-      "projectType": "library",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/testing/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/testing"],
-          "options": {
-            "jestConfig": "libs/testing/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
-        "build": {
-          "builder": "@nrwl/node:package",
-          "outputs": ["{options.outputPath}"],
-          "options": {
-            "outputPath": "dist/libs/testing",
-            "tsConfig": "libs/testing/tsconfig.lib.json",
-            "packageJson": "libs/testing/package.json",
-            "main": "libs/testing/src/index.ts",
-            "assets": ["libs/testing/*.md"]
-          }
-        }
-      }
-    },
-    "todo-example-app": {
+    "user-auth-starter": {
       "projectType": "application",
-      "root": "apps/todo-example-app",
-      "sourceRoot": "apps/todo-example-app/src",
+      "root": "apps/user-auth-starter",
+      "sourceRoot": "apps/user-auth-starter/src",
       "prefix": "orcha",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/todo-example-app",
-            "index": "apps/todo-example-app/src/index.html",
-            "main": "apps/todo-example-app/src/main.ts",
-            "polyfills": "apps/todo-example-app/src/polyfills.ts",
-            "tsConfig": "apps/todo-example-app/tsconfig.app.json",
+            "outputPath": "dist/apps/user-auth-starter",
+            "index": "apps/user-auth-starter/src/index.html",
+            "main": "apps/user-auth-starter/src/main.ts",
+            "polyfills": "apps/user-auth-starter/src/polyfills.ts",
+            "tsConfig": "apps/user-auth-starter/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/todo-example-app/src/favicon.ico", "apps/todo-example-app/src/assets"],
-            "styles": ["./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css", "apps/todo-example-app/src/styles.scss"],
+            "assets": ["apps/user-auth-starter/src/favicon.ico", "apps/user-auth-starter/src/assets"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "apps/user-auth-starter/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/todo-example-app/src/environments/environment.ts",
-                  "with": "apps/todo-example-app/src/environments/environment.prod.ts"
+                  "replace": "apps/user-auth-starter/src/environments/environment.ts",
+                  "with": "apps/user-auth-starter/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -267,94 +108,94 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "todo-example-app:build"
+            "browserTarget": "user-auth-starter:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "todo-example-app:build:production"
+              "browserTarget": "user-auth-starter:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "todo-example-app:build"
+            "browserTarget": "user-auth-starter:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/todo-example-app/src/**/*.ts", "apps/todo-example-app/src/**/*.html"]
+            "lintFilePatterns": ["apps/user-auth-starter/src/**/*.ts", "apps/user-auth-starter/src/**/*.html"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/todo-example-app"],
+          "outputs": ["coverage/apps/user-auth-starter"],
           "options": {
-            "jestConfig": "apps/todo-example-app/jest.config.js",
+            "jestConfig": "apps/user-auth-starter/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
     "server-core-services": {
-      "root": "libs/todo-example-app/server/core/services",
-      "sourceRoot": "libs/todo-example-app/server/core/services/src",
+      "root": "libs/user-auth-starter/server/core/services",
+      "sourceRoot": "libs/user-auth-starter/server/core/services/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/todo-example-app/server/core/services/**/*.ts"]
+            "lintFilePatterns": ["libs/user-auth-starter/server/core/services/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/todo-example-app/server/core/services"],
+          "outputs": ["coverage/libs/user-auth-starter/server/core/services"],
           "options": {
-            "jestConfig": "libs/todo-example-app/server/core/services/jest.config.js",
+            "jestConfig": "libs/user-auth-starter/server/core/services/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
     "server-core-domain": {
-      "root": "libs/todo-example-app/server/core/domain",
-      "sourceRoot": "libs/todo-example-app/server/core/domain/src",
+      "root": "libs/user-auth-starter/server/core/domain",
+      "sourceRoot": "libs/user-auth-starter/server/core/domain/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/todo-example-app/server/core/domain/**/*.ts"]
+            "lintFilePatterns": ["libs/user-auth-starter/server/core/domain/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/todo-example-app/server/core/domain"],
+          "outputs": ["coverage/libs/user-auth-starter/server/core/domain"],
           "options": {
-            "jestConfig": "libs/todo-example-app/server/core/domain/jest.config.js",
+            "jestConfig": "libs/user-auth-starter/server/core/domain/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
     "server-orcha": {
-      "root": "libs/todo-example-app/server/orcha",
-      "sourceRoot": "libs/todo-example-app/server/orcha/src",
+      "root": "libs/user-auth-starter/server/orcha",
+      "sourceRoot": "libs/user-auth-starter/server/orcha/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/todo-example-app/server/orcha/**/*.ts"]
+            "lintFilePatterns": ["libs/user-auth-starter/server/orcha/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/todo-example-app/server/orcha"],
+          "outputs": ["coverage/libs/user-auth-starter/server/orcha"],
           "options": {
-            "jestConfig": "libs/todo-example-app/server/orcha/jest.config.js",
+            "jestConfig": "libs/user-auth-starter/server/orcha/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -362,24 +203,24 @@
     },
     "client-shared-data-access": {
       "projectType": "library",
-      "root": "libs/todo-example-app/client/shared/data-access",
-      "sourceRoot": "libs/todo-example-app/client/shared/data-access/src",
-      "prefix": "orcha-todo-example-app",
+      "root": "libs/user-auth-starter/client/shared/data-access",
+      "sourceRoot": "libs/user-auth-starter/client/shared/data-access/src",
+      "prefix": "orcha-user-auth-starter",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/todo-example-app/client/shared/data-access/src/**/*.ts",
-              "libs/todo-example-app/client/shared/data-access/src/**/*.html"
+              "libs/user-auth-starter/client/shared/data-access/src/**/*.ts",
+              "libs/user-auth-starter/client/shared/data-access/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/todo-example-app/client/shared/data-access"],
+          "outputs": ["coverage/libs/user-auth-starter/client/shared/data-access"],
           "options": {
-            "jestConfig": "libs/todo-example-app/client/shared/data-access/jest.config.js",
+            "jestConfig": "libs/user-auth-starter/client/shared/data-access/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -387,66 +228,66 @@
     },
     "client-shell": {
       "projectType": "library",
-      "root": "libs/todo-example-app/client/shell",
-      "sourceRoot": "libs/todo-example-app/client/shell/src",
-      "prefix": "orcha-todo-example-app",
+      "root": "libs/user-auth-starter/client/shell",
+      "sourceRoot": "libs/user-auth-starter/client/shell/src",
+      "prefix": "orcha-user-auth-starter",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/todo-example-app/client/shell/src/**/*.ts",
-              "libs/todo-example-app/client/shell/src/**/*.html"
+              "libs/user-auth-starter/client/shell/src/**/*.ts",
+              "libs/user-auth-starter/client/shell/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/todo-example-app/client/shell"],
+          "outputs": ["coverage/libs/user-auth-starter/client/shell"],
           "options": {
-            "jestConfig": "libs/todo-example-app/client/shell/jest.config.js",
+            "jestConfig": "libs/user-auth-starter/client/shell/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
     "shared-domain": {
-      "root": "libs/todo-example-app/shared/domain",
-      "sourceRoot": "libs/todo-example-app/shared/domain/src",
+      "root": "libs/user-auth-starter/shared/domain",
+      "sourceRoot": "libs/user-auth-starter/shared/domain/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/todo-example-app/shared/domain/**/*.ts"]
+            "lintFilePatterns": ["libs/user-auth-starter/shared/domain/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/todo-example-app/shared/domain"],
+          "outputs": ["coverage/libs/user-auth-starter/shared/domain"],
           "options": {
-            "jestConfig": "libs/todo-example-app/shared/domain/jest.config.js",
+            "jestConfig": "libs/user-auth-starter/shared/domain/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
     "shared-util": {
-      "root": "libs/todo-example-app/shared/util",
-      "sourceRoot": "libs/todo-example-app/shared/util/src",
+      "root": "libs/user-auth-starter/shared/util",
+      "sourceRoot": "libs/user-auth-starter/shared/util/src",
       "projectType": "library",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/todo-example-app/shared/util/**/*.ts"]
+            "lintFilePatterns": ["libs/user-auth-starter/shared/util/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/todo-example-app/shared/util"],
+          "outputs": ["coverage/libs/user-auth-starter/shared/util"],
           "options": {
-            "jestConfig": "libs/todo-example-app/shared/util/jest.config.js",
+            "jestConfig": "libs/user-auth-starter/shared/util/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -454,24 +295,24 @@
     },
     "client-shared-util": {
       "projectType": "library",
-      "root": "libs/todo-example-app/client/shared/util",
-      "sourceRoot": "libs/todo-example-app/client/shared/util/src",
-      "prefix": "orcha-todo-example-app",
+      "root": "libs/user-auth-starter/client/shared/util",
+      "sourceRoot": "libs/user-auth-starter/client/shared/util/src",
+      "prefix": "orcha-user-auth-starter",
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/todo-example-app/client/shared/util/src/**/*.ts",
-              "libs/todo-example-app/client/shared/util/src/**/*.html"
+              "libs/user-auth-starter/client/shared/util/src/**/*.ts",
+              "libs/user-auth-starter/client/shared/util/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/todo-example-app/client/shared/util"],
+          "outputs": ["coverage/libs/user-auth-starter/client/shared/util"],
           "options": {
-            "jestConfig": "libs/todo-example-app/client/shared/util/jest.config.js",
+            "jestConfig": "libs/user-auth-starter/client/shared/util/jest.config.js",
             "passWithNoTests": true
           }
         }
@@ -529,5 +370,5 @@
       "style": "scss"
     }
   },
-  "defaultProject": "todo-example-app"
+  "defaultProject": "user-auth-starter"
 }

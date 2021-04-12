@@ -1,6 +1,6 @@
 import { HttpStatus, INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
-import { IUserOrchestration } from '@orcha-todo-example-app/shared/domain';
+import { IUserOrchestration } from '@orcha-user-auth-starter/shared/domain';
 import { ITestOrchestration } from '@orcha/testing';
 import { AppTestModule } from '../../core/app-test.module';
 import { DatabaseService } from '../../core/database.service';
